@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shaan Malik Dubai | IPL VIP Tips</title>
+<title>Shaan Malik Dubai | IPL VIP Predictions</title>
 
 <style>
 
@@ -29,6 +29,8 @@ padding:25px;
 text-align:center;
 }
 
+/* HEADER */
+
 .logo{
 font-size:34px;
 font-weight:bold;
@@ -36,18 +38,38 @@ color:#00ffd5;
 }
 
 .subtitle{
-margin-top:5px;
+margin-top:6px;
 opacity:0.9;
 }
+
+/* BADGE */
 
 .live{
 margin-top:15px;
 background:red;
-padding:7px 14px;
+padding:8px 14px;
 border-radius:6px;
 display:inline-block;
 font-weight:bold;
 }
+
+/* STATS */
+
+.stats{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.stat{
+background:#1e2a45;
+padding:12px 18px;
+border-radius:8px;
+}
+
+/* COUNTDOWN */
 
 .card{
 margin-top:25px;
@@ -59,8 +81,10 @@ border-radius:14px;
 .timer{
 font-size:40px;
 color:#00ffd5;
-margin-top:15px;
+margin-top:10px;
 }
+
+/* BUTTON */
 
 .join{
 margin-top:25px;
@@ -74,11 +98,22 @@ text-decoration:none;
 color:white;
 }
 
+/* MEMBER COUNTER */
+
 .counter{
 margin-top:15px;
 color:#00ffd5;
 font-size:18px;
 }
+
+/* URGENCY */
+
+.urgent{
+margin-top:10px;
+color:#ffcc00;
+}
+
+/* FOOTER */
 
 .footer{
 margin-top:40px;
@@ -94,18 +129,34 @@ font-size:13px;
 
 <div class="overlay">
 
-<div class="logo">🏏 Shaan Malik Dubai</div>
+<div class="logo">
+🏏 Shaan Malik Dubai
+</div>
 
-<div class="subtitle">India No.1 IPL Prediction Channel</div>
+<div class="subtitle">
+India No.1 IPL Prediction Channel
+</div>
 
-<div class="live">IPL SEASON COMING SOON</div>
+<div class="live">
+🔴 IPL Season Coming Soon
+</div>
+
+<div class="stats">
+
+<div class="stat">✔ 85% Accuracy</div>
+
+<div class="stat">✔ Daily Toss Tips</div>
+
+<div class="stat">✔ VIP Predictions</div>
+
+</div>
 
 <div class="card">
 
-<h2>IPL Starts In</h2>
+<h2>Next VIP Prediction In</h2>
 
 <div class="timer" id="countdown">
-30 Days
+05:00
 </div>
 
 </div>
@@ -122,6 +173,12 @@ JOIN VIP TELEGRAM
 
 </div>
 
+<div class="urgent">
+
+⚡ Only Limited VIP Spots Left
+
+</div>
+
 <div class="footer">
 
 © Shaan Malik Dubai | IPL VIP Predictions
@@ -131,6 +188,31 @@ JOIN VIP TELEGRAM
 </div>
 
 <script>
+
+/* Countdown */
+
+var time=300;
+
+setInterval(function(){
+
+var m=Math.floor(time/60);
+
+var s=time%60;
+
+document.getElementById("countdown").innerHTML=
+
+m+":"+(s<10?"0"+s:s);
+
+time--;
+
+if(time<0){
+
+window.location.href="https://t.me/+3iEOKW9Xe004ZjJl";
+
+}
+
+},1000);
+
 
 /* Member Counter */
 
@@ -147,4 +229,5 @@ el.innerText=num+Math.floor(Math.random()*3);
 </script>
 
 </body>
+
 </html>
