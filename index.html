@@ -22,6 +22,8 @@ background:url("https://images.unsplash.com/photo-1593341646782-e0b495cff86d") c
 color:white;
 }
 
+/* DARK OVERLAY */
+
 .overlay{
 background:rgba(0,0,0,0.85);
 min-height:100vh;
@@ -32,17 +34,19 @@ text-align:center;
 /* HEADER */
 
 .logo{
-font-size:34px;
+font-size:36px;
 font-weight:bold;
 color:#00ffd5;
+text-shadow:0 0 10px #00ffd5;
 }
 
 .subtitle{
-margin-top:6px;
+margin-top:8px;
 opacity:0.9;
+font-size:18px;
 }
 
-/* BADGE */
+/* LIVE BADGE */
 
 .live{
 margin-top:15px;
@@ -59,7 +63,7 @@ font-weight:bold;
 margin-top:20px;
 display:flex;
 justify-content:center;
-gap:15px;
+gap:12px;
 flex-wrap:wrap;
 }
 
@@ -69,7 +73,7 @@ padding:12px 18px;
 border-radius:8px;
 }
 
-/* COUNTDOWN */
+/* CARD */
 
 .card{
 margin-top:25px;
@@ -78,32 +82,46 @@ padding:25px;
 border-radius:14px;
 }
 
+/* TIMER */
+
 .timer{
-font-size:40px;
+font-size:42px;
 color:#00ffd5;
 margin-top:10px;
+text-shadow:0 0 8px #00ffd5;
 }
 
-/* BUTTON */
+/* 3D BUTTON */
 
 .join{
-margin-top:25px;
-background:#1e88e5;
-padding:18px;
-border-radius:12px;
-font-size:20px;
+margin-top:30px;
+display:inline-block;
+background:linear-gradient(145deg,#1e88e5,#0d47a1);
+padding:18px 40px;
+border-radius:14px;
+font-size:22px;
 font-weight:bold;
-display:block;
 text-decoration:none;
 color:white;
+box-shadow:
+0 6px 0 #08306b,
+0 10px 20px rgba(0,0,0,0.5);
+transition:0.2s;
+}
+
+.join:hover{
+transform:translateY(2px);
+box-shadow:
+0 3px 0 #08306b,
+0 5px 10px rgba(0,0,0,0.5);
 }
 
 /* MEMBER COUNTER */
 
 .counter{
-margin-top:15px;
-color:#00ffd5;
+margin-top:18px;
 font-size:18px;
+color:#00ffd5;
 }
 
 /* URGENCY */
@@ -111,6 +129,7 @@ font-size:18px;
 .urgent{
 margin-top:10px;
 color:#ffcc00;
+font-weight:bold;
 }
 
 /* FOOTER */
@@ -214,7 +233,7 @@ window.location.href="https://t.me/+3iEOKW9Xe004ZjJl";
 },1000);
 
 
-/* Member Counter */
+/* Fake Member Counter */
 
 setInterval(function(){
 
