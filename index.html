@@ -1,100 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shaan Malik Dubai | IPL VIP Tips</title>
+<title>Shaan Malik Dubai | IPL VIP Predictions</title>
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:url("https://images.unsplash.com/photo-1593341646782-e0b495cff86d") center/cover no-repeat;
 color:white;
-text-align:center;
-background-image:url("https://images.unsplash.com/photo-1593341646782-e0b495cff86d");
-background-size:cover;
-background-position:center;
 }
 
 .overlay{
-background:rgba(0,0,0,0.80);
+background:rgba(0,0,0,0.85);
 min-height:100vh;
-padding:20px;
+padding:25px;
+text-align:center;
 }
 
-.header{
+/* HEADER */
+
+.logo{
 font-size:34px;
 font-weight:bold;
 color:#00ffd5;
-margin-top:10px;
 }
 
-.sub{
-font-size:18px;
+.subtitle{
 margin-top:5px;
 opacity:0.9;
 }
 
 .live{
+margin-top:15px;
 background:red;
-padding:8px 14px;
+padding:7px 14px;
 border-radius:6px;
 display:inline-block;
-margin-top:12px;
 font-weight:bold;
 }
 
-.match-box{
-background:#0d1b2a;
-padding:20px;
-border-radius:12px;
-margin-top:20px;
+/* MATCH CARD */
+
+.card{
+margin-top:25px;
+background:rgba(20,30,50,0.9);
+padding:25px;
+border-radius:14px;
 }
 
 .match-title{
-font-size:24px;
+font-size:22px;
 font-weight:bold;
+}
+
+.teams{
+margin-top:15px;
+font-size:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.team{
+background:#1e2a45;
+padding:10px 15px;
+border-radius:8px;
 }
 
 .timer{
-font-size:36px;
+font-size:40px;
 color:#00ffd5;
-margin-top:10px;
+margin-top:15px;
 }
 
-.join-btn{
+/* BUTTON */
+
+.join{
 margin-top:25px;
 background:#1e88e5;
-border:none;
-padding:18px 35px;
+padding:18px;
+border-radius:12px;
 font-size:20px;
-border-radius:10px;
-color:white;
 font-weight:bold;
+display:block;
+text-decoration:none;
+color:white;
 }
 
-.members{
+/* COUNTER */
+
+.counter{
 margin-top:15px;
-font-size:18px;
 color:#00ffd5;
+font-size:18px;
 }
+
+/* PROOF */
 
 .proof{
-margin-top:35px;
+margin-top:40px;
 }
 
-.proof img{
-width:90%;
-border-radius:12px;
-margin-top:12px;
+.gallery{
+display:grid;
+grid-template-columns:1fr;
+gap:12px;
 }
+
+.gallery img{
+width:100%;
+border-radius:12px;
+}
+
+/* FOOTER */
 
 .footer{
 margin-top:40px;
-font-size:14px;
 opacity:0.7;
+font-size:13px;
 }
 
 </style>
@@ -105,37 +140,51 @@ opacity:0.7;
 
 <div class="overlay">
 
-<div class="header">🏏 Shaan Malik Dubai</div>
+<div class="logo">🏏 Shaan Malik Dubai</div>
 
-<div class="sub">India No.1 IPL Prediction Channel</div>
+<div class="subtitle">India No.1 IPL Prediction Channel</div>
 
 <div class="live">IPL LIVE MATCH</div>
 
-<div class="match-box">
+<div class="card">
 
 <div class="match-title">
-Today's IPL Toss & Match Prediction
+VIP Toss & Match Prediction
 </div>
 
-<div class="timer" id="countdown">05:00</div>
+<div class="teams">
+
+<div class="team">MI</div>
+
+<div class="team">VS</div>
+
+<div class="team">CSK</div>
 
 </div>
 
-<a href="https://t.me/+3iEOKW9Xe004ZjJl">
+<div class="timer" id="countdown">
+05:00
+</div>
 
-<button class="join-btn">
+</div>
+
+<a class="join" href="https://t.me/+3iEOKW9Xe004ZjJl">
+
 JOIN VIP TELEGRAM
-</button>
 
 </a>
 
-<div class="members">
-🔥 12,584 Members Already Joined
+<div class="counter">
+
+🔥 <span id="members">12584</span> Members Already Joined
+
 </div>
 
 <div class="proof">
 
 <h2>IPL Winning Proof</h2>
+
+<div class="gallery">
 
 <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e">
 
@@ -145,35 +194,54 @@ JOIN VIP TELEGRAM
 
 </div>
 
+</div>
+
 <div class="footer">
-© 2026 Shaan Malik Dubai | IPL VIP Predictions
+
+© Shaan Malik Dubai | IPL VIP Predictions
+
 </div>
 
 </div>
 
 <script>
 
-var time = 300;
+/* Countdown */
 
-var x = setInterval(function(){
+var time=300;
 
-var minutes = Math.floor(time / 60);
-var seconds = time % 60;
+setInterval(function(){
 
-document.getElementById("countdown").innerHTML =
-minutes + ":" + (seconds < 10 ? "0"+seconds : seconds);
+var m=Math.floor(time/60);
+
+var s=time%60;
+
+document.getElementById("countdown").innerHTML=
+
+m+":"+(s<10?"0"+s:s);
 
 time--;
 
-if(time < 0){
-
-clearInterval(x);
+if(time<0){
 
 window.location.href="https://t.me/+3iEOKW9Xe004ZjJl";
 
 }
 
 },1000);
+
+
+/* Fake member counter */
+
+setInterval(function(){
+
+var el=document.getElementById("members");
+
+var num=parseInt(el.innerText);
+
+el.innerText=num+Math.floor(Math.random()*3);
+
+},4000);
 
 </script>
 
