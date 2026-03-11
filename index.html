@@ -3,14 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Shaan Malik Dubai</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(180deg,#032b17,#054d2d);
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#022b1d,#064d33);
 color:white;
 text-align:center;
 }
@@ -21,27 +29,43 @@ margin:auto;
 padding:40px 20px;
 }
 
-h1{
+.title{
 font-size:42px;
+font-weight:800;
 letter-spacing:2px;
+color:#ffd700;
+text-shadow:0 0 15px rgba(255,215,0,0.5);
 }
 
-.highlight{
-color:#ffd000;
+.subtitle{
+font-size:18px;
+margin-top:10px;
+opacity:0.9;
 }
 
 .logo{
 width:120px;
 height:120px;
 border-radius:50%;
-background:#ffd000;
-color:#03331d;
+background:#ffd700;
+color:#022b1d;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:40px;
-font-weight:bold;
-margin:30px auto;
+font-size:38px;
+font-weight:800;
+margin:35px auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+h2{
+font-size:32px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.highlight{
+color:#ffd700;
 }
 
 .stats{
@@ -52,12 +76,17 @@ flex-wrap:wrap;
 }
 
 .stat{
-margin:10px;
+padding:10px 20px;
 }
 
-.stat h2{
-color:#ffd000;
-font-size:32px;
+.stat h3{
+font-size:30px;
+color:#ffd700;
+font-weight:800;
+}
+
+.stat p{
+font-weight:600;
 }
 
 .features{
@@ -68,44 +97,77 @@ margin-top:40px;
 }
 
 .feature{
-background:rgba(255,255,255,0.05);
-padding:20px;
-border-radius:10px;
+background:rgba(255,255,255,0.06);
+padding:25px;
+border-radius:12px;
+font-weight:600;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-5px);
+background:rgba(255,255,255,0.1);
+}
+
+.feature h3{
+font-weight:800;
+margin-bottom:8px;
 }
 
 .join-btn{
 display:inline-block;
 margin-top:40px;
-background:#ffd000;
-color:black;
-padding:18px 35px;
-font-weight:bold;
+padding:18px 45px;
 font-size:20px;
-border-radius:8px;
+font-weight:800;
+letter-spacing:1px;
+color:black;
+background:linear-gradient(180deg,#ffd700,#ffb300);
+border-radius:12px;
 text-decoration:none;
+box-shadow:0 8px 0 #c99600,0 10px 25px rgba(0,0,0,0.5);
+transition:all 0.2s ease;
+}
+
+.join-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 0 #c99600,0 20px 40px rgba(0,0,0,0.6);
+}
+
+.join-btn:active{
+transform:translateY(4px);
+box-shadow:0 2px 0 #c99600;
 }
 
 .footer{
 margin-top:60px;
-font-size:14px;
 opacity:0.7;
+font-weight:500;
 }
 
 @media(max-width:700px){
+
 .features{
 grid-template-columns:1fr;
 }
+
+.title{
+font-size:34px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<h1 class="highlight">SHAAN MALIK DUBAI</h1>
-<p>The Name of Trust</p>
+<div class="title">SHAAN MALIK DUBAI</div>
+<div class="subtitle">THE NAME OF TRUST</div>
 
 <div class="logo">SMD</div>
 
@@ -116,51 +178,56 @@ grid-template-columns:1fr;
 <div class="stats">
 
 <div class="stat">
-<h2>20K+</h2>
+<h3>20K+</h3>
 <p>Subscribers</p>
 </div>
 
 <div class="stat">
-<h2>5+</h2>
+<h3>5+</h3>
 <p>Years Experience</p>
 </div>
 
 <div class="stat">
-<h2>✔</h2>
+<h3>✔</h3>
 <p>Verified Tips</p>
 </div>
 
 </div>
 
-<a class="join-btn" href="https://t.me/+zQOSiuRtS3wzNGU1">JOIN CHANNEL NOW</a>
+<a class="join-btn" href="https://t.me/+zQOSiuRtS3wzNGU1">
+🚀 JOIN TELEGRAM CHANNEL
+</a>
 
 <div class="features">
 
 <div class="feature">
-<h3>🏆 Expert Analysis</h3>
+<h3>🏆 EXPERT ANALYSIS</h3>
 <p>Deep research based sports predictions.</p>
 </div>
 
 <div class="feature">
-<h3>⚡ Real Time Alerts</h3>
+<h3>⚡ REAL TIME ALERTS</h3>
 <p>Get tips before the match starts.</p>
 </div>
 
 <div class="feature">
-<h3>🔒 Safe & Secure</h3>
+<h3>🔒 SAFE & SECURE</h3>
 <p>Your identity stays protected.</p>
 </div>
 
 <div class="feature">
-<h3>📊 High Accuracy</h3>
+<h3>📊 HIGH ACCURACY</h3>
 <p>Consistent winning record.</p>
 </div>
 
 </div>
 
 <div class="footer">
-© 2026 Shaan Malik Dubai<br>
+
+© 2026 Shaan Malik Dubai  
+<br>
 Join on Telegram
+
 </div>
 
 </div>
