@@ -7,7 +7,7 @@
 
 <title>Shaan Malik Dubai</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,57 +17,86 @@ height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#07152d;
+background:radial-gradient(circle at top,#0a1f44,#030b1a);
 font-family:Poppins;
 color:white;
+overflow:hidden;
 }
+
+/* BACKGROUND PARTICLES */
+
+body::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#ffb30022 2px,transparent 2px);
+background-size:60px 60px;
+animation:move 30s linear infinite;
+}
+
+@keyframes move{
+from{transform:translate(0,0);}
+to{transform:translate(-200px,-200px);}
+}
+
+/* CARD */
 
 .card{
 
-background:#0c1b33;
-padding:40px 30px;
-border-radius:20px;
-text-align:center;
+background:#081630;
+padding:45px 35px;
+border-radius:25px;
 width:90%;
 max-width:420px;
+text-align:center;
 
-box-shadow:0 0 40px rgba(0,0,0,0.6);
+box-shadow:0 0 40px rgba(0,0,0,0.7);
+
+position:relative;
+z-index:2;
 
 }
+
+/* BADGE */
 
 .badge{
 
 background:#ffb300;
 color:black;
-padding:10px 20px;
-border-radius:30px;
+padding:10px 25px;
+border-radius:40px;
 font-weight:700;
 display:inline-block;
 margin-bottom:25px;
 
 }
 
+/* TITLE */
+
 h1{
 
 font-family:Orbitron;
-font-size:34px;
-margin:10px 0;
+font-size:36px;
 letter-spacing:2px;
+margin:5px 0;
 
 }
 
 .subtitle{
 
 color:#ffb300;
-letter-spacing:2px;
+letter-spacing:3px;
 margin-bottom:25px;
 
 }
 
+/* INFO */
+
 .info{
 
 text-align:left;
-line-height:2;
+line-height:2.2;
 font-size:16px;
 margin-bottom:30px;
 
@@ -80,37 +109,35 @@ font-weight:700;
 
 }
 
+/* BUTTON */
+
 .join{
 
 display:block;
-background:#ffb300;
+background:linear-gradient(45deg,#ffb300,#ffd700);
 color:black;
 text-decoration:none;
-font-weight:700;
+font-weight:800;
 font-size:18px;
 padding:16px;
-border-radius:40px;
+border-radius:50px;
 margin-top:10px;
 
-box-shadow:0 8px 0 #c99300;
+box-shadow:0 0 15px #ffb300;
 
-transition:0.2s;
-
-}
-
-.join:hover{
-
-transform:translateY(-2px);
-box-shadow:0 10px 0 #c99300;
+animation:glow 2s infinite alternate;
 
 }
 
-.join:active{
+@keyframes glow{
 
-transform:translateY(4px);
-box-shadow:0 2px 0 #c99300;
+from{box-shadow:0 0 10px #ffb300;}
+
+to{box-shadow:0 0 25px #ffd700;}
 
 }
+
+/* REDIRECT */
 
 .redirect{
 
@@ -138,9 +165,9 @@ opacity:0.7;
 
 🏆 Accuracy Rate: <span>92%</span><br>
 
-⭐ 5+ Years Experience<br>
+⭐ Experience: <span>5+ Years</span><br>
 
-👥 Members Joined: <span>20000+</span><br>
+👥 Members Joined: <span id="members">0</span><br>
 
 ⚡ Trusted by Thousands
 
@@ -154,7 +181,7 @@ JOIN TELEGRAM CHANNEL
 
 <div class="redirect">
 
-Redirecting in <span id="count">25</span> seconds...
+Redirecting in <span id="count">10</span> seconds...
 
 </div>
 
@@ -162,7 +189,26 @@ Redirecting in <span id="count">25</span> seconds...
 
 <script>
 
-let time = 25;
+/* MEMBER COUNTER */
+
+let members = 0;
+let target = 20000;
+
+let counter = setInterval(function(){
+
+members += 250;
+
+document.getElementById("members").innerHTML = members;
+
+if(members >= target){
+clearInterval(counter);
+}
+
+},50);
+
+/* REDIRECT TIMER */
+
+let time = 10;
 
 setInterval(function(){
 
