@@ -23,7 +23,7 @@ color:white;
 overflow:hidden;
 }
 
-/* BACKGROUND PARTICLES */
+/* animated background */
 
 body::before{
 content:"";
@@ -40,28 +40,23 @@ from{transform:translate(0,0);}
 to{transform:translate(-200px,-200px);}
 }
 
-/* CARD */
+/* card */
 
 .card{
-
 background:#081630;
 padding:45px 35px;
 border-radius:25px;
 width:90%;
 max-width:420px;
 text-align:center;
-
 box-shadow:0 0 40px rgba(0,0,0,0.7);
-
 position:relative;
 z-index:2;
-
 }
 
-/* BADGE */
+/* badge */
 
 .badge{
-
 background:#ffb300;
 color:black;
 padding:10px 25px;
@@ -69,50 +64,42 @@ border-radius:40px;
 font-weight:700;
 display:inline-block;
 margin-bottom:25px;
-
 }
 
-/* TITLE */
+/* title */
 
 h1{
-
 font-family:Orbitron;
 font-size:36px;
 letter-spacing:2px;
 margin:5px 0;
-
 }
 
-.subtitle{
+/* subtitle */
 
+.subtitle{
 color:#ffb300;
 letter-spacing:3px;
 margin-bottom:25px;
-
 }
 
-/* INFO */
+/* info */
 
 .info{
-
 text-align:left;
 line-height:2.2;
 font-size:16px;
 margin-bottom:30px;
-
 }
 
 .info span{
-
 color:#ffb300;
 font-weight:700;
-
 }
 
-/* BUTTON */
+/* button */
 
 .join{
-
 display:block;
 background:linear-gradient(45deg,#ffb300,#ffd700);
 color:black;
@@ -122,28 +109,20 @@ font-size:18px;
 padding:16px;
 border-radius:50px;
 margin-top:10px;
-
 box-shadow:0 0 15px #ffb300;
-
 animation:glow 2s infinite alternate;
-
 }
 
 @keyframes glow{
-
 from{box-shadow:0 0 10px #ffb300;}
-
 to{box-shadow:0 0 25px #ffd700;}
-
 }
 
-/* REDIRECT */
+/* redirect text */
 
 .redirect{
-
 margin-top:20px;
 opacity:0.7;
-
 }
 
 </style>
@@ -167,7 +146,7 @@ opacity:0.7;
 
 ⭐ Experience: <span>5+ Years</span><br>
 
-👥 Members Joined: <span id="members">0</span><br>
+👥 Members Joined: <span id="members">10237</span><br>
 
 ⚡ Trusted by Thousands
 
@@ -181,7 +160,7 @@ JOIN TELEGRAM CHANNEL
 
 <div class="redirect">
 
-Redirecting in <span id="count">10</span> seconds...
+Redirecting in <span id="count">5</span> seconds...
 
 </div>
 
@@ -189,26 +168,21 @@ Redirecting in <span id="count">10</span> seconds...
 
 <script>
 
-/* MEMBER COUNTER */
+/* members counter */
 
-let members = 0;
-let target = 20000;
+let members = 10237;
 
-let counter = setInterval(function(){
+setInterval(function(){
 
-members += 250;
+members += 2;
 
 document.getElementById("members").innerHTML = members;
 
-if(members >= target){
-clearInterval(counter);
-}
+},1000);
 
-},50);
+/* redirect timer */
 
-/* REDIRECT TIMER */
-
-let time = 10;
+let time = 5;
 
 setInterval(function(){
 
