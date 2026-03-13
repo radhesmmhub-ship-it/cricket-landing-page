@@ -57,27 +57,37 @@ padding:10px 25px;
 border-radius:40px;
 font-weight:700;
 display:inline-block;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 h1{
 font-family:Orbitron;
-font-size:36px;
+font-size:34px;
 letter-spacing:2px;
 margin:5px 0;
 }
 
 .subtitle{
 color:#ffb300;
-letter-spacing:3px;
+letter-spacing:2px;
+margin-bottom:20px;
+font-weight:600;
+}
+
+.free{
+background:#0d2448;
+padding:12px;
+border-radius:10px;
 margin-bottom:25px;
+font-size:15px;
+line-height:1.6;
 }
 
 .info{
 text-align:left;
-line-height:2.2;
-font-size:16px;
-margin-bottom:30px;
+line-height:2;
+font-size:15px;
+margin-bottom:25px;
 }
 
 .info span{
@@ -104,6 +114,12 @@ from{box-shadow:0 0 10px #ffb300;}
 to{box-shadow:0 0 25px #ffd700;}
 }
 
+.redirect{
+margin-top:15px;
+opacity:0.8;
+font-size:14px;
+}
+
 </style>
 
 </head>
@@ -112,18 +128,26 @@ to{box-shadow:0 0 25px #ffd700;}
 
 <div class="card">
 
-<div class="badge">🔥 LIVE ASTRO MATCH TIPS</div>
+<div class="badge">🔥 LIVE CRICKET TIPS</div>
 
 <h1>SHAAN MALIK</h1>
 <h1>DUBAI</h1>
 
 <div class="subtitle">PREMIUM CRICKET PREDICTIONS</div>
 
+<div class="free">
+🏏 Daily IPL Toss, Match & Session Tips<br>
+🎯 100% Free of Cost for All Members
+</div>
+
 <div class="info">
 
 🏆 Accuracy Rate: <span>92%</span><br>
+
 ⭐ Experience: <span>5+ Years</span><br>
+
 👥 Members Joined: <span id="members">10237</span><br>
+
 ⚡ Trusted by Thousands
 
 </div>
@@ -132,11 +156,15 @@ to{box-shadow:0 0 25px #ffd700;}
 JOIN TELEGRAM CHANNEL
 </a>
 
+<div class="redirect">
+Redirecting to Telegram in <span id="count">5</span> seconds...
+</div>
+
 </div>
 
 <script>
 
-/* MEMBERS +2 PER SECOND */
+/* MEMBER COUNTER */
 
 let members = 10237;
 
@@ -145,6 +173,27 @@ setInterval(function(){
 members += 2;
 
 document.getElementById("members").innerText = members;
+
+},1000);
+
+
+/* REDIRECT */
+
+let time = 5;
+
+let timer = setInterval(function(){
+
+time--;
+
+document.getElementById("count").innerText = time;
+
+if(time <= 0){
+
+clearInterval(timer);
+
+window.location.href="https://t.me/+zQOSiuRtS3wzNGU1";
+
+}
 
 },1000);
 
