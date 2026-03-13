@@ -40,8 +40,6 @@ from{transform:translate(0,0);}
 to{transform:translate(-200px,-200px);}
 }
 
-/* card */
-
 .card{
 background:#081630;
 padding:45px 35px;
@@ -54,8 +52,6 @@ position:relative;
 z-index:2;
 }
 
-/* badge */
-
 .badge{
 background:#ffb300;
 color:black;
@@ -66,8 +62,6 @@ display:inline-block;
 margin-bottom:25px;
 }
 
-/* title */
-
 h1{
 font-family:Orbitron;
 font-size:36px;
@@ -75,15 +69,11 @@ letter-spacing:2px;
 margin:5px 0;
 }
 
-/* subtitle */
-
 .subtitle{
 color:#ffb300;
 letter-spacing:3px;
 margin-bottom:25px;
 }
-
-/* info */
 
 .info{
 text-align:left;
@@ -96,8 +86,6 @@ margin-bottom:30px;
 color:#ffb300;
 font-weight:700;
 }
-
-/* button */
 
 .join{
 display:block;
@@ -141,47 +129,37 @@ opacity:0.7;
 <div class="info">
 
 🏆 Accuracy Rate: <span>92%</span><br>
-
 ⭐ Experience: <span>5+ Years</span><br>
-
 👥 Members Joined: <span id="members">10237</span><br>
-
 ⚡ Trusted by Thousands
 
 </div>
 
 <a class="join" href="https://t.me/+zQOSiuRtS3wzNGU1">
-
 JOIN TELEGRAM CHANNEL
-
 </a>
 
 <div class="redirect">
-
 Auto redirect in <span id="count">5</span> seconds...
-
 </div>
 
 </div>
 
 <script>
 
-/* MEMBER COUNTER */
+/* MEMBER COUNTER +2 PER SECOND */
 
 let members = 10237;
 
 setInterval(function(){
 
 members += 2;
-
 document.getElementById("members").innerText = members;
 
 },1000);
 
 
-/* REDIRECT AFTER PAGE LOAD */
-
-setTimeout(function(){
+/* REDIRECT TIMER */
 
 let time = 5;
 
@@ -200,8 +178,6 @@ window.location.href="https://t.me/+zQOSiuRtS3wzNGU1";
 }
 
 },1000);
-
-},2000);
 
 </script>
 
