@@ -23,6 +23,8 @@ color:white;
 overflow:hidden;
 }
 
+/* animated background */
+
 body::before{
 content:"";
 position:absolute;
@@ -38,86 +40,116 @@ from{transform:translate(0,0);}
 to{transform:translate(-200px,-200px);}
 }
 
+/* card */
+
 .card{
 background:#081630;
-padding:45px 35px;
-border-radius:25px;
+padding:50px 40px;
+border-radius:28px;
 width:90%;
-max-width:420px;
+max-width:430px;
 text-align:center;
-box-shadow:0 0 40px rgba(0,0,0,0.7);
+box-shadow:0 0 60px rgba(0,0,0,0.8);
 position:relative;
 z-index:2;
 }
 
+/* badge */
+
 .badge{
-background:#ffb300;
+background:linear-gradient(45deg,#ffb300,#ffd700);
 color:black;
-padding:10px 25px;
-border-radius:40px;
+padding:12px 28px;
+border-radius:50px;
 font-weight:700;
 display:inline-block;
 margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
 }
+
+/* title */
 
 h1{
 font-family:Orbitron;
-font-size:34px;
-letter-spacing:2px;
-margin:5px 0;
+font-size:36px;
+letter-spacing:3px;
+margin:6px 0;
+text-shadow:0 0 10px rgba(255,255,255,0.4);
 }
+
+/* subtitle */
 
 .subtitle{
 color:#ffb300;
-letter-spacing:2px;
-margin-bottom:20px;
+letter-spacing:3px;
+margin-bottom:22px;
 font-weight:600;
 }
 
+/* free section */
+
 .free{
-background:#0d2448;
-padding:12px;
-border-radius:10px;
+background:#0e2b55;
+padding:14px;
+border-radius:12px;
 margin-bottom:25px;
 font-size:15px;
 line-height:1.6;
 }
 
+/* stats */
+
 .info{
 text-align:center;
 line-height:2.2;
 font-size:16px;
-margin-bottom:25px;
+margin-bottom:28px;
 font-weight:500;
 }
 
 .info span{
-color:#ffb300;
+color:#ffd700;
 font-weight:700;
 }
 
+/* 3D BUTTON */
+
 .join{
 display:block;
-background:linear-gradient(45deg,#ffb300,#ffd700);
+background:linear-gradient(#ffd700,#ffb300);
 color:black;
 text-decoration:none;
 font-weight:800;
-font-size:18px;
-padding:16px;
+font-size:19px;
+padding:18px;
 border-radius:50px;
 margin-top:10px;
-box-shadow:0 0 15px #ffb300;
-animation:glow 2s infinite alternate;
+
+box-shadow:
+0 8px 0 #c99600,
+0 10px 25px rgba(0,0,0,0.6);
+
+transition:all 0.2s ease;
 }
 
-@keyframes glow{
-from{box-shadow:0 0 10px #ffb300;}
-to{box-shadow:0 0 25px #ffd700;}
+.join:hover{
+transform:translateY(-3px);
+box-shadow:
+0 12px 0 #c99600,
+0 15px 35px rgba(0,0,0,0.7);
 }
+
+.join:active{
+transform:translateY(6px);
+box-shadow:
+0 3px 0 #c99600;
+}
+
+/* redirect text */
 
 .redirect{
-margin-top:15px;
-opacity:0.8;
+margin-top:16px;
+opacity:0.85;
 font-size:14px;
 }
 
@@ -154,11 +186,11 @@ font-size:14px;
 </div>
 
 <a class="join" href="https://t.me/+zQOSiuRtS3wzNGU1">
-JOIN TELEGRAM CHANNEL
+🚀 JOIN TELEGRAM CHANNEL
 </a>
 
 <div class="redirect">
-Redirecting to Telegram in <span id="count">5</span> seconds...
+Redirecting to Telegram in <span id="count">12</span> seconds...
 </div>
 
 </div>
@@ -178,9 +210,9 @@ document.getElementById("members").innerText = members;
 },1000);
 
 
-/* REDIRECT */
+/* REDIRECT TIMER */
 
-let time = 5;
+let time = 12;
 
 let timer = setInterval(function(){
 
