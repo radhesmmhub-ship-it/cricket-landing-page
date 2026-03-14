@@ -7,6 +7,22 @@
 
 <title>Shaan Malik Dubai</title>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','909509918540083');
+fbq('track','PageView');
+</script>
+<!-- End Meta Pixel Code -->
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -23,7 +39,7 @@ color:white;
 overflow:hidden;
 }
 
-/* animated gradient background */
+/* animated background */
 
 body::before{
 content:"";
@@ -40,8 +56,6 @@ animation:bgmove 12s infinite alternate;
 from{transform:translate(-50px,-50px);}
 to{transform:translate(50px,50px);}
 }
-
-/* glass card */
 
 .card{
 backdrop-filter:blur(20px);
@@ -88,7 +102,6 @@ margin-bottom:25px;
 }
 
 .info{
-text-align:center;
 line-height:2;
 font-size:15px;
 margin-bottom:25px;
@@ -99,15 +112,11 @@ color:#ffd700;
 font-weight:700;
 }
 
-/* buttons */
-
 .buttons{
 display:flex;
 flex-direction:column;
 gap:15px;
 }
-
-/* glass buttons */
 
 .btn{
 padding:16px;
@@ -120,8 +129,6 @@ border:1px solid rgba(255,255,255,0.2);
 box-shadow:0 8px 25px rgba(0,0,0,0.4);
 transition:0.3s;
 }
-
-/* colors */
 
 .toss{
 background:linear-gradient(135deg,#ff7a00,#ffb347);
@@ -156,8 +163,7 @@ opacity:0.8;
 
 <div class="badge">🔥 LIVE CRICKET TIPS</div>
 
-<h1>SHAAN MALIK</h1>
-<h1>DUBAI</h1>
+<h1>SHAAN MALIK DUBAI</h1>
 
 <div class="subtitle">PREMIUM CRICKET PREDICTIONS</div>
 
@@ -168,7 +174,7 @@ opacity:0.8;
 
 <div class="info">
 
-🏆 Accuracy Rate: <span>92%</span><br>
+🏆 Accuracy Rate: <span>98%</span><br>
 ⭐ Experience: <span>5+ Years</span><br>
 👥 Members Joined: <span id="members">10237</span><br>
 ⚡ Trusted by Thousands
@@ -177,16 +183,28 @@ opacity:0.8;
 
 <div class="buttons">
 
-<a class="btn toss" href="https://t.me/+zQOSiuRtS3wzNGU1">
+<a class="btn toss"
+href="https://t.me/+zQOSiuRtS3wzNGU1"
+onclick="fbq('track','Lead');">
+
 🔥 JOIN FOR FREE TOSS TIPS
+
 </a>
 
-<a class="btn match" href="https://t.me/+zQOSiuRtS3wzNGU1">
+<a class="btn match"
+href="https://t.me/+zQOSiuRtS3wzNGU1"
+onclick="fbq('track','Lead');">
+
 🏏 JOIN FOR FREE MATCH PREDICTIONS
+
 </a>
 
-<a class="btn session" href="https://t.me/+zQOSiuRtS3wzNGU1">
+<a class="btn session"
+href="https://t.me/+zQOSiuRtS3wzNGU1"
+onclick="fbq('track','Lead');">
+
 📊 JOIN FOR FREE SESSION UPDATES
+
 </a>
 
 </div>
@@ -199,8 +217,6 @@ Redirecting to Telegram in <span id="count">12</span> seconds...
 
 <script>
 
-/* members counter */
-
 let members = 10237;
 
 setInterval(function(){
@@ -211,8 +227,6 @@ document.getElementById("members").innerText = members;
 
 },1000);
 
-
-/* redirect */
 
 let time = 12;
 
