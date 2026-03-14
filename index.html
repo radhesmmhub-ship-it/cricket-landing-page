@@ -7,7 +7,7 @@
 
 <title>Shaan Malik Dubai</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,78 +17,81 @@ height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:radial-gradient(circle at top,#0a1f44,#030b1a);
+background:linear-gradient(135deg,#071428,#0a1f44);
 font-family:Poppins;
 color:white;
 overflow:hidden;
 }
+
+/* animated gradient background */
 
 body::before{
 content:"";
 position:absolute;
 width:200%;
 height:200%;
-background:radial-gradient(circle,#ffb30022 2px,transparent 2px);
-background-size:60px 60px;
-animation:move 30s linear infinite;
+background:radial-gradient(circle at 30% 30%,#ffd70033,transparent),
+radial-gradient(circle at 70% 60%,#ff6b0033,transparent),
+radial-gradient(circle at 40% 80%,#00d4ff33,transparent);
+animation:bgmove 12s infinite alternate;
 }
 
-@keyframes move{
-from{transform:translate(0,0);}
-to{transform:translate(-200px,-200px);}
+@keyframes bgmove{
+from{transform:translate(-50px,-50px);}
+to{transform:translate(50px,50px);}
 }
+
+/* glass card */
 
 .card{
-background:#081630;
-padding:50px 40px;
-border-radius:28px;
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:45px 35px;
+border-radius:25px;
 width:90%;
 max-width:430px;
 text-align:center;
-box-shadow:0 0 60px rgba(0,0,0,0.8);
+box-shadow:0 0 40px rgba(0,0,0,0.7);
 position:relative;
 z-index:2;
 }
 
 .badge{
-background:linear-gradient(45deg,#ffb300,#ffd700);
+background:#ffd700;
 color:black;
-padding:12px 28px;
-border-radius:50px;
+padding:8px 20px;
+border-radius:40px;
 font-weight:700;
 display:inline-block;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 h1{
 font-family:Orbitron;
-font-size:36px;
+font-size:34px;
 letter-spacing:3px;
-margin:6px 0;
+margin:5px 0;
 }
 
 .subtitle{
-color:#ffb300;
-letter-spacing:3px;
-margin-bottom:22px;
-font-weight:600;
+color:#ffd700;
+margin-bottom:20px;
+letter-spacing:2px;
 }
 
 .free{
-background:#0e2b55;
-padding:14px;
-border-radius:12px;
+background:rgba(255,255,255,0.06);
+padding:12px;
+border-radius:10px;
 margin-bottom:25px;
-font-size:15px;
-line-height:1.6;
 }
 
 .info{
 text-align:center;
-line-height:2.2;
-font-size:16px;
-margin-bottom:28px;
-font-weight:500;
+line-height:2;
+font-size:15px;
+margin-bottom:25px;
 }
 
 .info span{
@@ -96,7 +99,7 @@ color:#ffd700;
 font-weight:700;
 }
 
-/* BUTTONS */
+/* buttons */
 
 .buttons{
 display:flex;
@@ -104,40 +107,43 @@ flex-direction:column;
 gap:15px;
 }
 
+/* glass buttons */
+
 .btn{
-display:block;
-background:linear-gradient(#ffd700,#ffb300);
-color:black;
-text-decoration:none;
-font-weight:800;
-font-size:17px;
 padding:16px;
 border-radius:50px;
+font-weight:700;
+text-decoration:none;
+color:white;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+transition:0.3s;
+}
 
-box-shadow:
-0 8px 0 #c99600,
-0 12px 25px rgba(0,0,0,0.6);
+/* colors */
 
-transition:all 0.2s ease;
+.toss{
+background:linear-gradient(135deg,#ff7a00,#ffb347);
+}
+
+.match{
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.session{
+background:linear-gradient(135deg,#7f00ff,#e100ff);
 }
 
 .btn:hover{
-transform:translateY(-3px);
-box-shadow:
-0 12px 0 #c99600,
-0 18px 35px rgba(0,0,0,0.7);
-}
-
-.btn:active{
-transform:translateY(6px);
-box-shadow:
-0 3px 0 #c99600;
+transform:scale(1.05);
+box-shadow:0 10px 35px rgba(0,0,0,0.6);
 }
 
 .redirect{
-margin-top:18px;
-opacity:0.85;
+margin-top:15px;
 font-size:14px;
+opacity:0.8;
 }
 
 </style>
@@ -157,32 +163,29 @@ font-size:14px;
 
 <div class="free">
 🏏 Daily IPL Toss, Match & Session Tips<br>
-🎯 100% Free of Cost for All Members
+🎯 100% Free of Cost
 </div>
 
 <div class="info">
 
 🏆 Accuracy Rate: <span>92%</span><br>
-
 ⭐ Experience: <span>5+ Years</span><br>
-
 👥 Members Joined: <span id="members">10237</span><br>
-
 ⚡ Trusted by Thousands
 
 </div>
 
 <div class="buttons">
 
-<a class="btn" href="https://t.me/+zQOSiuRtS3wzNGU1">
+<a class="btn toss" href="https://t.me/+zQOSiuRtS3wzNGU1">
 🔥 JOIN FOR FREE TOSS TIPS
 </a>
 
-<a class="btn" href="https://t.me/+zQOSiuRtS3wzNGU1">
+<a class="btn match" href="https://t.me/+zQOSiuRtS3wzNGU1">
 🏏 JOIN FOR FREE MATCH PREDICTIONS
 </a>
 
-<a class="btn" href="https://t.me/+zQOSiuRtS3wzNGU1">
+<a class="btn session" href="https://t.me/+zQOSiuRtS3wzNGU1">
 📊 JOIN FOR FREE SESSION UPDATES
 </a>
 
@@ -196,6 +199,8 @@ Redirecting to Telegram in <span id="count">12</span> seconds...
 
 <script>
 
+/* members counter */
+
 let members = 10237;
 
 setInterval(function(){
@@ -206,6 +211,8 @@ document.getElementById("members").innerText = members;
 
 },1000);
 
+
+/* redirect */
 
 let time = 12;
 
