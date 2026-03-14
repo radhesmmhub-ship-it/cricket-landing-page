@@ -18,8 +18,8 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '909509918549083'); 
-fbq('track', 'PageView');
+fbq('init','909509918549083');
+fbq('track','PageView');
 </script>
 
 <noscript>
@@ -44,8 +44,6 @@ color:white;
 overflow:hidden;
 }
 
-/* animated background */
-
 body::before{
 content:"";
 position:absolute;
@@ -62,8 +60,6 @@ animation:bgmove 12s infinite alternate;
 from{transform:translate(-50px,-50px);}
 to{transform:translate(50px,50px);}
 }
-
-/* glass card */
 
 .card{
 backdrop-filter:blur(20px);
@@ -192,56 +188,39 @@ opacity:0.8;
 
 <div class="buttons">
 
-<a class="btn toss"
-href="https://t.me/+zQOSiuRtS3wzNGU1"
-onclick="fbq('track','Lead');">
-
+<a class="btn toss" href="https://t.me/+zQOSiuRtS3wzNGU1" onclick="fbq('track','Lead');">
 🔥 JOIN FOR FREE TOSS TIPS
-
 </a>
 
-<a class="btn match"
-href="https://t.me/+zQOSiuRtS3wzNGU1"
-onclick="fbq('track','Lead');">
-
+<a class="btn match" href="https://t.me/+zQOSiuRtS3wzNGU1" onclick="fbq('track','Lead');">
 🏏 JOIN FOR FREE MATCH PREDICTIONS
-
 </a>
 
-<a class="btn session"
-href="https://t.me/+zQOSiuRtS3wzNGU1"
-onclick="fbq('track','Lead');">
-
+<a class="btn session" href="https://t.me/+zQOSiuRtS3wzNGU1" onclick="fbq('track','Lead');">
 📊 JOIN FOR FREE SESSION UPDATES
-
 </a>
 
 </div>
 
 <div class="redirect">
-Redirecting to Telegram in <span id="count">12</span> seconds...
+Redirecting to Telegram in <span id="count">1</span> seconds...
 </div>
 
 </div>
 
 <script>
 
-/* members counter */
-
 let members = 10237;
 
 setInterval(function(){
-
 members += 2;
-
 document.getElementById("members").innerText = members;
-
 },1000);
 
 
 /* redirect */
 
-let time = 12;
+let time = 1;
 
 let timer = setInterval(function(){
 
