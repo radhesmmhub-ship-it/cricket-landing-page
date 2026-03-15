@@ -105,57 +105,19 @@ border-radius:10px;
 margin-bottom:25px;
 }
 
-.info{
-line-height:2;
-font-size:15px;
-margin-bottom:25px;
-}
-
-.info span{
-color:#ffd700;
-font-weight:700;
-}
-
-.buttons{
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
 .btn{
+display:block;
 padding:16px;
+margin:10px 0;
 border-radius:50px;
-font-weight:700;
 text-decoration:none;
+font-weight:700;
 color:white;
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.2);
-box-shadow:0 8px 25px rgba(0,0,0,0.4);
-transition:0.3s;
 }
 
-.toss{
-background:linear-gradient(135deg,#ff7a00,#ffb347);
-}
-
-.match{
-background:linear-gradient(135deg,#00c6ff,#0072ff);
-}
-
-.session{
-background:linear-gradient(135deg,#7f00ff,#e100ff);
-}
-
-.btn:hover{
-transform:scale(1.05);
-box-shadow:0 10px 35px rgba(0,0,0,0.6);
-}
-
-.redirect{
-margin-top:15px;
-font-size:14px;
-opacity:0.8;
-}
+.toss{background:linear-gradient(145deg,#ff7a00,#ffb347);}
+.match{background:linear-gradient(145deg,#00c6ff,#0072ff);}
+.session{background:linear-gradient(145deg,#7f00ff,#e100ff);}
 
 </style>
 
@@ -177,50 +139,17 @@ opacity:0.8;
 🎯 100% Free of Cost
 </div>
 
-<div class="info">
+<a class="btn toss" href="https://t.me/+zQOSiuRtS3wzNGU1">🔥 JOIN FREE TOSS TIPS</a>
+<a class="btn match" href="https://t.me/+zQOSiuRtS3wzNGU1">🏏 JOIN FREE MATCH PREDICTIONS</a>
+<a class="btn session" href="https://t.me/+zQOSiuRtS3wzNGU1">📊 JOIN FREE SESSION UPDATES</a>
 
-🏆 Accuracy Rate: <span>98%</span><br>
-⭐ Experience: <span>5+ Years</span><br>
-👥 Members Joined: <span id="members">10237</span><br>
-⚡ Trusted by Thousands
-
-</div>
-
-<div class="buttons">
-
-<a class="btn toss" href="https://t.me/+zQOSiuRtS3wzNGU1" onclick="fbq('track','Lead');">
-🔥 JOIN FOR FREE TOSS TIPS
-</a>
-
-<a class="btn match" href="https://t.me/+zQOSiuRtS3wzNGU1" onclick="fbq('track','Lead');">
-🏏 JOIN FOR FREE MATCH PREDICTIONS
-</a>
-
-<a class="btn session" href="https://t.me/+zQOSiuRtS3wzNGU1" onclick="fbq('track','Lead');">
-📊 JOIN FOR FREE SESSION UPDATES
-</a>
-
-</div>
-
-<div class="redirect">
-Redirecting to Telegram in <span id="count">40</span> seconds...
-</div>
+<p>Redirecting in <span id="count">2</span> seconds...</p>
 
 </div>
 
 <script>
 
-let members = 10237;
-
-setInterval(function(){
-members += 2;
-document.getElementById("members").innerText = members;
-},1000);
-
-
-/* redirect */
-
-let time = 40;
+let time = 2;
 
 let timer = setInterval(function(){
 
