@@ -26,7 +26,6 @@ fbq('track','PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=909509918549083&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -43,7 +42,7 @@ justify-content:center;
 color:white;
 }
 
-/* glass background */
+/* glass card */
 
 .card{
 width:90%;
@@ -94,7 +93,7 @@ font-weight:700;
 
 .btn{
 display:block;
-margin-top:15px;
+margin-top:20px;
 padding:16px;
 border-radius:50px;
 font-weight:700;
@@ -111,14 +110,6 @@ transition:0.3s;
 
 .btn:hover{
 transform:scale(1.05);
-}
-
-/* timer */
-
-.timer{
-margin-top:15px;
-opacity:0.8;
-font-size:14px;
 }
 
 </style>
@@ -141,7 +132,7 @@ font-size:14px;
 🏏 Last IPL Record : <span>75 / 75 Match Pass</span><br>
 📊 Cricket Prediction Accuracy : <span>99%</span><br>
 ⭐ Experience : <span>5+ Years</span><br>
-👥 Members Joined : <span id="members">12450</span>
+👥 Members Joined : <span>12450+</span>
 
 </div>
 
@@ -153,40 +144,7 @@ JOIN TELEGRAM CHANNEL
 
 </a>
 
-<div class="timer">
-Redirecting in <span id="count">15</span> seconds...
 </div>
-
-</div>
-
-<script>
-
-let members = 12450;
-
-setInterval(function(){
-members += 1;
-document.getElementById("members").innerText = members;
-},2000);
-
-
-let time = 15;
-
-let timer = setInterval(function(){
-
-time--;
-document.getElementById("count").innerText = time;
-
-if(time <= 0){
-
-clearInterval(timer);
-
-window.location.href="https://t.me/+zQOSiuRtS3wzNGU1";
-
-}
-
-},1000);
-
-</script>
 
 </body>
 </html>
