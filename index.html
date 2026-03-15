@@ -26,98 +26,100 @@ fbq('track','PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=909509918549083&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
+font-family:Arial, sans-serif;
+background:#000;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
 height:100vh;
+text-align:center;
+}
+
+.container{
+width:90%;
+max-width:420px;
+}
+
+/* profile photo */
+
+.profile{
+width:160px;
+height:160px;
+border-radius:50%;
+border:6px solid gold;
+box-shadow:0 0 35px gold;
+overflow:hidden;
+margin:auto;
+}
+
+.profile img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* headings */
+
+h1{
+font-size:26px;
+margin:15px 0;
+}
+
+h2{
+font-size:18px;
+margin:10px 0;
+}
+
+/* timer */
+
+.circle{
+width:130px;
+height:130px;
+border-radius:50%;
+border:6px solid #444;
 display:flex;
 align-items:center;
 justify-content:center;
-background:linear-gradient(135deg,#071428,#0a1f44);
-font-family:Poppins;
-color:white;
-overflow:hidden;
+font-size:36px;
+margin:20px auto;
 }
 
-body::before{
-content:"";
-position:absolute;
-width:200%;
-height:200%;
-background:
-radial-gradient(circle at 30% 30%,#ffd70033,transparent),
-radial-gradient(circle at 70% 60%,#ff6b0033,transparent),
-radial-gradient(circle at 40% 80%,#00d4ff33,transparent);
-animation:bgmove 12s infinite alternate;
+/* accuracy */
+
+.accuracy{
+font-size:24px;
 }
 
-@keyframes bgmove{
-from{transform:translate(-50px,-50px);}
-to{transform:translate(50px,50px);}
+.accuracy span{
+color:red;
+font-weight:bold;
 }
 
-.card{
-backdrop-filter:blur(20px);
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-padding:45px 35px;
-border-radius:25px;
-width:90%;
-max-width:430px;
-text-align:center;
-box-shadow:0 0 40px rgba(0,0,0,0.7);
-position:relative;
-z-index:2;
-}
-
-.badge{
-background:#ffd700;
-color:black;
-padding:8px 20px;
-border-radius:40px;
-font-weight:700;
-display:inline-block;
-margin-bottom:18px;
-}
-
-h1{
-font-family:Orbitron;
-font-size:34px;
-letter-spacing:3px;
-margin:5px 0;
-}
-
-.subtitle{
-color:#ffd700;
-margin-bottom:20px;
-letter-spacing:2px;
-}
-
-.free{
-background:rgba(255,255,255,0.06);
-padding:12px;
-border-radius:10px;
-margin-bottom:25px;
-}
+/* button */
 
 .btn{
 display:block;
-padding:16px;
-margin:10px 0;
+margin-top:25px;
+padding:18px;
+background:red;
+color:white;
+font-size:18px;
 border-radius:50px;
 text-decoration:none;
-font-weight:700;
-color:white;
+font-weight:bold;
+box-shadow:0 0 20px red;
 }
 
-.toss{background:linear-gradient(145deg,#ff7a00,#ffb347);}
-.match{background:linear-gradient(145deg,#00c6ff,#0072ff);}
-.session{background:linear-gradient(145deg,#7f00ff,#e100ff);}
+.footer{
+margin-top:20px;
+font-size:16px;
+}
 
 </style>
 
@@ -125,41 +127,51 @@ color:white;
 
 <body>
 
-<div class="card">
+<div class="container">
 
-<div class="badge">🔥 LIVE CRICKET TIPS</div>
+<!-- PROFILE PHOTO -->
 
-<h1>SHAAN MALIK</h1>
-<h1>DUBAI</h1>
-
-<div class="subtitle">PREMIUM CRICKET PREDICTIONS</div>
-
-<div class="free">
-🏏 Daily IPL Toss, Match & Session Tips<br>
-🎯 100% Free of Cost
+<div class="profile">
+<img src="https://raw.githubusercontent.com/radhesmmlhub-ship-it/cricket-landing-page/main/IMG-20260315-WA0059.jpg">
 </div>
 
-<a class="btn toss" href="https://t.me/+zQOSiuRtS3wzNGU1">🔥 JOIN FREE TOSS TIPS</a>
-<a class="btn match" href="https://t.me/+zQOSiuRtS3wzNGU1">🏏 JOIN FREE MATCH PREDICTIONS</a>
-<a class="btn session" href="https://t.me/+zQOSiuRtS3wzNGU1">📊 JOIN FREE SESSION UPDATES</a>
+<h2>🔥 I AM CRICKET ANALYST 🔥</h2>
 
-<p>Redirecting in <span id="count">2</span> seconds...</p>
+<h1>👑 SHAAN MALIK DUBAI 👑</h1>
+
+<div class="circle">
+<span id="count">20</span>
+</div>
+
+<div class="accuracy">
+<span>99%</span> Right Accuracy in Cricket Prediction
+</div>
+
+<h3>IPL Match Pass 2026 ⚡</h3>
+
+<a class="btn"
+href="https://t.me/+zQOSiuRtS3wzNGU1"
+onclick="fbq('track','Lead');">
+JOIN TELEGRAM CHANNEL
+</a>
+
+<div class="footer">
+💰 MAUKA HAI CRORE KAMANE KA 💰
+</div>
 
 </div>
 
 <script>
 
-let time = 2;
+let time = 20;
 
-let timer = setInterval(function(){
+setInterval(function(){
 
 time--;
 
 document.getElementById("count").innerText = time;
 
 if(time <= 0){
-
-clearInterval(timer);
 
 window.location.href="https://t.me/+zQOSiuRtS3wzNGU1";
 
