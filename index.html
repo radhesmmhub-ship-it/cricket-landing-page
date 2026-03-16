@@ -17,24 +17,17 @@ fbq('track','PageView');
 body{
 margin:0;
 font-family:Arial;
-background:#050505;
 color:white;
 text-align:center;
-}
+background:#000;
 
-/* GRID BACKGROUND */
+/* PERFECT GRID BACKGROUND */
 
-body::before{
-content:"";
-position:fixed;
-width:100%;
-height:100%;
 background-image:
-linear-gradient(#333 1px, transparent 1px),
-linear-gradient(90deg,#333 1px, transparent 1px);
+linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+
 background-size:40px 40px;
-opacity:0.25;
-z-index:-1;
 }
 
 /* PROFILE */
@@ -44,7 +37,7 @@ width:130px;
 height:130px;
 border-radius:50%;
 border:5px solid gold;
-box-shadow:0 0 35px gold;
+box-shadow:0 0 40px gold;
 margin-top:35px;
 object-fit:cover;
 }
@@ -54,6 +47,7 @@ object-fit:cover;
 h1{
 color:gold;
 letter-spacing:3px;
+margin-top:15px;
 }
 
 /* BADGES */
@@ -81,35 +75,29 @@ margin-top:25px;
 }
 
 .stat{
-padding:15px;
+padding:18px;
 border-radius:12px;
-background:#1a1a1a;
+background:#151515;
 }
 
-.box1{box-shadow:0 0 15px gold;}
-.box2{box-shadow:0 0 15px #00aaff;}
-.box3{box-shadow:0 0 15px #ff00cc;}
+.box1{box-shadow:0 0 20px gold;}
+.box2{box-shadow:0 0 20px #00aaff;}
+.box3{box-shadow:0 0 20px #ff00cc;}
 
 .stat h2{
 margin:0;
+font-size:22px;
 }
 
-/* HINDI JOIN TEXT */
+/* JOIN TEXT */
 
 .join-text{
 margin-top:25px;
-font-weight:bold;
 font-size:18px;
-animation:blink 1s infinite;
+font-weight:bold;
 }
 
-@keyframes blink{
-0%{opacity:1;}
-50%{opacity:0.4;}
-100%{opacity:1;}
-}
-
-/* BUTTON */
+/* JOIN BUTTON */
 
 .join{
 margin-top:15px;
@@ -123,17 +111,17 @@ font-weight:700;
 border-radius:12px;
 color:white;
 text-decoration:none;
+
 background:linear-gradient(90deg,#00aaff,#ff0000);
+
 animation:pulse 1.5s infinite;
 }
-
-/* BUTTON ANIMATION */
 
 @keyframes pulse{
 
 0%{box-shadow:0 0 10px red;}
 
-50%{box-shadow:0 0 30px red;}
+50%{box-shadow:0 0 35px red;}
 
 100%{box-shadow:0 0 10px red;}
 
@@ -151,10 +139,12 @@ margin-top:30px;
 }
 
 .feature{
-padding:14px;
+padding:15px;
 border-radius:10px;
 background:#1c1c1c;
 }
+
+/* FOOTER */
 
 .footer{
 margin-top:30px;
