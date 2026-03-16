@@ -7,7 +7,7 @@
 
 <title>Shaan Malik Dubai</title>
 
-<!-- Meta Pixel Code -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -22,87 +22,152 @@ fbq('init','909509918549083');
 fbq('track','PageView');
 </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=909509918549083&ev=PageView&noscript=1"/>
-</noscript>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
 
 body{
 margin:0;
-font-family:Poppins;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
+font-family:Arial;
+background:#0b0b0b;
 color:white;
-}
-
-/* glass card */
-
-.card{
-width:90%;
-max-width:420px;
-padding:40px 30px;
-border-radius:20px;
-
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(20px);
-
-border:1px solid rgba(255,255,255,0.2);
-
-box-shadow:0 20px 50px rgba(0,0,0,0.5);
-
 text-align:center;
 }
 
+/* GRID BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+linear-gradient(#333 1px, transparent 1px),
+linear-gradient(90deg,#333 1px, transparent 1px);
+background-size:40px 40px;
+opacity:0.3;
+z-index:-1;
+}
+
+/* PROFILE IMAGE */
+
+.profile{
+margin-top:40px;
+}
+
+.profile img{
+width:130px;
+height:130px;
+border-radius:50%;
+border:5px solid gold;
+box-shadow:0 0 25px gold;
+object-fit:cover;
+}
+
+/* TITLE */
+
 h1{
-font-size:32px;
-margin-bottom:5px;
-font-weight:700;
-letter-spacing:2px;
-}
-
-.subtitle{
+font-size:40px;
 color:#ffd700;
-margin-bottom:20px;
-font-weight:600;
+margin:15px 0;
+font-weight:bold;
 }
 
-.stats{
-line-height:1.9;
-font-size:16px;
+/* MEMBERS */
+
+.members{
+font-size:20px;
+margin-bottom:20px;
+}
+
+/* BADGES */
+
+.badges{
 margin-bottom:25px;
 }
 
-.stats span{
-color:#ffd700;
-font-weight:700;
+.badge{
+display:inline-block;
+padding:8px 18px;
+border-radius:20px;
+margin:5px;
+font-weight:bold;
 }
 
-.btn{
-display:block;
-margin-top:20px;
-padding:16px;
-border-radius:50px;
-font-weight:700;
+.badge1{
+background:#6b5b00;
+}
+
+.badge2{
+background:#7a0000;
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+
+.stat{
+background:#0f2d1c;
+padding:18px;
+border-radius:15px;
+width:110px;
+box-shadow:0 0 15px #00ff90;
+}
+
+.stat h2{
+margin:0;
+color:#ffd700;
+}
+
+.stat p{
+margin:5px 0 0;
+font-size:14px;
+}
+
+/* JOIN BUTTON */
+
+.join-btn{
+display:inline-block;
+padding:18px 40px;
+border-radius:40px;
+font-size:20px;
+font-weight:bold;
 text-decoration:none;
 color:white;
-font-size:16px;
-
-background:linear-gradient(45deg,#ff0000,#ff4d4d);
-
-box-shadow:0 10px 30px rgba(255,0,0,0.6);
-
-transition:0.3s;
+background:linear-gradient(90deg,#00ff88,#ff0000);
+box-shadow:0 0 25px #00ff88;
+margin-top:20px;
 }
 
-.btn:hover{
+.join-btn:hover{
 transform:scale(1.05);
+}
+
+/* FEATURES */
+
+.features{
+margin-top:30px;
+}
+
+.feature{
+display:inline-block;
+background:#173a2c;
+padding:12px 20px;
+margin:8px;
+border-radius:15px;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:30px;
+font-size:14px;
+opacity:0.7;
 }
 
 </style>
@@ -111,33 +176,27 @@ transform:scale(1.05);
 
 <body>
 
-<div class="card">
+<div class="profile">
 
-<h1>SHAAN MALIK</h1>
-<h1>DUBAI</h1>
+<img src="IMG-20260315-WA0059.jpg">
 
-<div class="subtitle">
-🔥 PREMIUM CRICKET ANALYST 🔥
+</div>
+
+<h1>SHAAN MALIK DUBAI</h1>
+
+<div class="members">
+👥 1.3M+ Active Members
+</div>
+
+<div class="badges">
+
+<span class="badge badge1">🏆 Premium Analyst</span>
+
+<span class="badge badge2">⚡ Live Updates</span>
+
 </div>
 
 <div class="stats">
 
-🏏 Last IPL Record : <span>75 / 75 Match Pass</span><br>
-📊 Cricket Prediction Accuracy : <span>99%</span><br>
-⭐ Experience : <span>5+ Years</span><br>
-👥 Members Joined : <span>12450+</span>
-
-</div>
-
-<a class="btn"
-href="tg://join?invite=zQOSiuRtS3wzNGU1"
-onclick="fbq('track','Lead');">
-
-JOIN TELEGRAM CHANNEL
-
-</a>
-
-</div>
-
-</body>
-</html>
+<div class="stat">
+<h2>136K</h
